@@ -5,8 +5,9 @@ const first = function(str, n=1) {
   return (n <= 1) ? firstChars : firstChars.join('');
 };
 
-const last = function(str, n) {
-  // Your code goes here
+const last = function(str, n=1) {
+  const lastChars = _.last(str.split(''), n);
+  return (n <= 1) ? lastChars : lastChars.join('');
 };
 
 const removeChar = function(str, target) {
