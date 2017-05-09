@@ -32,12 +32,14 @@ const truncateString = function(val, maxLength) {
 };
 
 const truncateLongItems = function(obj, maxLength) {
-  // hint: use truncateString above
   return _.map(obj, string => truncateString(string, maxLength));
 };
 
 const countChars = function(str) {
-  // Your code goes here
+  return _.reduce(str.split(''), (countObj, character) => {
+    (countObj[character]++) || (countObj[character] = 1);
+    return countObj;
+  }, {});
 };
 
 const dedup = function(str) {
