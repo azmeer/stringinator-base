@@ -17,8 +17,10 @@ const last = function(array, n = 1) {
 // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
 const indexOf = function(array, target, fromIndex=0) {
   let result = -1;
-  each(last(array, array.length-fromIndex),
-       ((el, index) => (el === target) && (result = index)));
+  each(array, 
+       ((el, index) =>
+        (index >= fromIndex) && (result === -1) && (el === target) &&
+        (result = index)));
   return result;
 };
 
