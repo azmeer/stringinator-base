@@ -19,11 +19,11 @@ const hasChar = function(str, target) {
 };
 
 const isOnlyDigits = function(str) {
-  return _.every(str.split(''), character => !isNaN(character));
+  return _.every(str.split(''), character => !isNaN(parseInt(character)));
 };
 
 const filterToOnlyDigits = function(str) {
-  // Your code goes here
+  return _.reject(str.split(''), character => isNaN(parseInt(character))).join('');
 };
 
 const truncateString = function(val, maxLength) {

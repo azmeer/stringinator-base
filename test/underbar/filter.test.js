@@ -17,4 +17,8 @@ describe('filter()', () => {
     };
     expect(_.filter(lettersAndNumbers, (el => typeof(el) === 'number'))).toEqual([1, 34, 45, 2]);
   });
+
+  it('filters an empty array to an empty array', () => {
+    expect(_.filter([], (el => el % 2 === 1))).toEqual([]);
+  });
 });
