@@ -112,7 +112,10 @@ const reject = function(arr, callback=identity) {
 
 // De-duplicates (de-dups) the elements / object values.
 const uniq = function(obj) {
-  // Your code goes here
+  const hasValue = {};
+  return filter(obj, el => 
+    (hasValue[el] === undefined) && (hasValue[el] = true)
+  );
 };
 
 
