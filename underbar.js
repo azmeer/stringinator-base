@@ -81,14 +81,14 @@ const reduce = function(obj, callback=identity, initialValue) {
 
 // Return true if the object contains the target.
 const contains = function(obj, target) {
-  return reduce(obj, (found, el) => {
-    return found || (el === target);
-  }, false);
+  return reduce(obj, (found, el) => { return found || (el === target); }, false);
 };
 
 // Return true if all the elements / object values are accepted by the callback.
 const every = function(obj, callback=identity) {
-  // Your code goes here
+  return reduce(obj, (allPassed, el) => {
+    return allPassed && !!callback(el);
+  }, true);
 };
 
 // Return true if even 1 element / object value is accepted by the callback.
