@@ -37,7 +37,7 @@ const each = function(obj, callback=identity) {
       callback(obj[index], index, obj);
     }
   } else {
-    for (let key in Object.keys(obj)) {
+    for (let key in obj) {
       callback(obj[key], key, obj);
     }
   }
@@ -81,6 +81,9 @@ const reduce = function(obj, callback=identity, initialValue) {
 
 // Return true if the object contains the target.
 const contains = function(obj, target) {
+  return reduce(obj, (found, el) => {
+    return found || (el === target);
+  }, false);
 };
 
 // Return true if all the elements / object values are accepted by the callback.
