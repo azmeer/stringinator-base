@@ -7,7 +7,7 @@ describe('indexOf()', () => {
   });
 
   it('returns the index of a value at the end of an array', () => {
-    const numbers = ['a', 'b', 'c', 'd'];
+    const letters = ['a', 'b', 'c', 'd'];
     expect(_.indexOf(numbers, 'd')).toBe(3);
   });
 
@@ -17,13 +17,13 @@ describe('indexOf()', () => {
   });
 
   it('returns the first matching index when multiple matches in array', () => {
-    const numbers = ['a', 'b', 'c', 'd', 'b'];
-    expect(_.indexOf(numbers, 'b')).toBe(1);
+    const letters = ['a', 'b', 'c', 'd', 'b'];
+    expect(_.indexOf(letters, 'b')).toBe(1);
   });
 
   it('starts searching at the given offset', () => {
-    const numbers = ['a', 'b', 'c', 'd', 'b'];
-    expect(_.indexOf(numbers, 'b', 2)).toBe(4);
+    const letters = ['a', 'b', 'c', 'd', 'b'];
+    expect(_.indexOf(letters, 'b', 2)).toBe(4);
   });
 
 });
