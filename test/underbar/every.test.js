@@ -7,7 +7,7 @@ describe('every()', () => {
     });
 
     it('returns true on an empty array', () => {
-      expect(_.every([])).toBe(false);
+      expect(_.every([])).toBe(true);
     });
 
     it('returns true if all numbers in an array are odd and we test for odd numbers', () => {

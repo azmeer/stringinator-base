@@ -8,7 +8,7 @@ describe('indexOf()', () => {
 
   it('returns the index of a value at the end of an array', () => {
     const letters = ['a', 'b', 'c', 'd'];
-    expect(_.indexOf(numbers, 'd')).toBe(3);
+    expect(_.indexOf(letters, 'd')).toBe(3);
   });
 
   it('returns -1 for a missing value', () => {
